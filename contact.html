@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Koala bear Information Center">
+    <meta name="keywords" content="Koala Information Center, Koala contact page">
+    <title>Contact Us</title>
+    <!-- Author: Immaculate Okoruwa,
+         Date: August 30, 2023-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/82df8ac0f2.js" crossorigin="anonymous"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+      }
+      
+      body  {
+          font-family: "Helvetica", Arial, sans-serif;
+          font-size:125%;
+          color: #333;
+          background-color:#9bd;
+      }
+      
+      form  { 
+          background-color: rgb(193, 216, 166);
+          width: 800px;
+          margin: 10px auto;
+          padding: 20px;
+          border: 2px solid rgb(209, 199, 199);
+          border-radius: 15px;
+      }
+      
+      legend  {
+          font-size: larger;
+          border-bottom: 2px dotted rgb(0, 128, 128);
+          padding-bottom: 0.25em;
+          margin-bottom: 0.5em;
+          color: #195019;
+      }
+      
+      fieldset  {
+        border: none;
+        border-bottom: 2px dotted rgb(0, 128, 128);
+        padding-bottom: 0.25em;
+        margin-bottom: 10px;
+      }
+      
+      fieldset div  {
+        margin: 5px 0;
+      }
+      
+      input, textarea, select  {
+        font-size: 1.1em;
+        padding: 2px 5px 4px;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+      
+      p {
+        margin-top: 16px;
+      } 
+      
+      label  { 
+        width: 150px;
+        text-align: right;
+        padding-right: 1.5em;
+        color: #195019;
+      }
+      
+      label.align {
+        float: left;
+      }
+      
+      input[id=button] {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        width: 100px;
+        border-radius: 35px;
+        margin: 10px;
+      } 
+      
+      input[type=submit]  {
+        margin-left: 50px;
+      }
+
+      @media screen and (max-width: 600px) {
+        form  { 
+          background-color: rgb(193, 216, 166);
+          width: 100%;
+          margin: 0;
+          padding: 0.25em;
+          border: none;
+          border-radius: 15px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <img
+          src="images/koala_banner.jpg"
+          alt="Koala Banner"
+          width="100%"
+          height="190" class="banner" />
+        <h1>Contact Us 📬<i class="fa-solid fa-phone"></i></h1>
+      </header>
+
+      <nav style="font-family: 'Young Serif', serif;">
+        <ul>
+          <li><a href="koala_home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="adopt.html">Adopt</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <main>
+        <form id="contact_form" method="post" action="form_response_basic.php">
+          <legend>Contact Us!</legend>
+          <p style="font-style:italic;">Send us a message. We would love to hear from you!</p>
+          
+          <fieldset>
+            <div>
+              <label for="firstname" class="align">First Name</label>
+              <input type="text" id="firstname" name="firstname" >
+            </div>
+        
+            <div>
+              <label for="lastname" class="align">Last Name</label>
+              <input type="text" id="lastname" name="lastname">
+            </div>
+            <div>
+              <label for="email" class="align">Email</label>
+              <input type="email" id="email" name="email" placeholder="name@anywhere.com">
+            </div>
+          </fieldset>
+        
+          <fieldset>
+            <div>
+              <p>Please leave a message</p>
+              <textarea name="message" id="message" cols="40" rows="10"></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Submit" id="button" name="submit" >
+              <input type="reset" value="Reset" id="button" name="reset" >
+            </div>
+          </fieldset>
+        </form><!--close form-->
+      </main>
+      <footer>
+        <p>
+          Copyright 2018 All rights reserved.
+          <a href="https://www.savethekoala.com/" target="_blank"
+            >Australian Koala Foundation</a
+          >
+        </p>
+        <p>
+          <img
+            src="images/koala_logo.svg"
+            alt="Koala logo"
+            width="5%"
+            height="5%" class="footimage"  />
+        </p>
+      </footer>
+    </div>
+    <!--Close the container div-->
+  </body>
+</html>

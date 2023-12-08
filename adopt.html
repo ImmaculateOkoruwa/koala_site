@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Koala bear adoption page">
+    <meta name="keywords" content="Adopt a Koala Bear">
+    <title>Adopt</title>
+    <!-- Author: Immaculate Okoruwa,
+         Date: November 6, 2023-->
+    <link rel="stylesheet" href="css/style_flex.css">
+    <style>
+      img {
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        margin: 0 auto;
+      }
+
+      form {
+        width: 90%;
+        max-width: 800px;
+        padding: 1.2em;
+        border: thin solid lightgray;
+        border-radius: 10px;
+        background-color: rgb(193, 216, 166);
+      }
+
+      .form-group {
+        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+      }
+
+      .form-group label, .label {
+        margin-right: 0.5em;
+        font-weight: 700;
+        flex-basis: 10em;
+        text-align: right;
+        color: #195019;
+      }
+
+      .form-group input {
+        line-height: 1;
+      }
+
+      .form-group input, textarea, .form-group select {
+        border-radius: 4px;
+        border: 1px solid gray;
+        padding: 8px;
+        font-size: .875rem;
+        flex: 1;
+      }
+
+      .form-group select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right .75rem center;
+        background-size: 16px 12px;
+        appearance: none;
+        padding-right: 3em;
+      }
+
+      .form-group select::after {
+        display: block;
+        clear: both;
+        content: "";
+      }
+
+      .message-label {
+        align-self: flex-start;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .row {
+        margin-bottom: 1em;
+        display: flex;
+      }
+
+      .services {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex: 1;
+      }
+
+      .flex-buttons {
+        display: flex;
+        justify-content: center;
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      .intro {
+        color: gray;
+      }
+
+      input[type=submit], input[type=reset] {
+        background-image: none;
+        border-radius: 4px;
+        border-color: black;
+        box-shadow: none;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+      }
+
+      input[type=submit] {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+        color: #fff;
+      }
+
+      input[type=reset] {
+        margin-right: 1rem;
+      }
+
+      label {
+        color: #195019;;
+      }
+
+      h2 {
+        color: #195019;
+      }
+
+      /* Add this style for the flexible structure */
+      .koala-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .koala-item {
+        flex: 0 0 30%;
+        width: 30%; 
+        margin: 1%;
+        text-align: center;
+      }
+
+      .koala-image {
+        width: 100%;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        margin: 0 auto;
+      }
+      @media (max-width: 500px) {
+    .koala-container {
+      justify-content: center;
+    }
+
+    .koala-item {
+      flex: 0 0 100%;
+    }
+  }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/82df8ac0f2.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <img
+          src="images/koala_banner.jpg"
+          alt="Koala Banner"
+          width="100%"
+          height="190" class="banner" />
+        <h1>Koala Bear National Information Centers<span style='font-size:40px;'>&#128040;</span><i class="fa-solid fa-earth-americas"></i></h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="koala_home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="adopt.html">Adopt</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <main>
+        <form method="post" action="form_response_basic.php">
+
+          <h2>Yes! I would like to adopt a Koala! Please send me information:</h2>
+
+          <p class="intro">Adopt a Koala for yourself or as a gift for someone special!</p>
+
+          <div class="form-group">
+            <label for="firstName">First Name: </label>
+            <input type="text" name="firstName" id="firstName" placeholder="First Name">
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name: </label>
+            <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+          </div>
+
+          <div class="form-group">
+            <label for="emailAddress">Email Address: </label>
+            <input type="text" name="emailAddress" id="emailAddress" placeholder="name@example.com">
+          </div>
+
+          <div class="row">
+            <p class="label">Select a Koala:</p>
+            <div class="services">
+              <div class="services">
+                <div class="koala-container">
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/ella.jpg" alt="Ella Koala Image">
+                    <input type="radio" name="selectedKoala" id="ella" value="Ella" checked>
+                    <label for="ella">Ella</label>
+                  </div>
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/grant.jpg" alt="Grant Koala Image">
+                    <input type="radio" name="selectedKoala" id="grant" value="Grant">
+                    <label for="grant">Grant</label>
+                  </div>
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/jams.jpg" alt="Jams Koala Image">
+                    <input type="radio" name="selectedKoala" id="jams" value="Jams">
+                    <label for="jams">Jams</label>
+                  </div>
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/jilley_and_baby.jpg" alt="Jilley and baby Koala Image">
+                    <input type="radio" name="selectedKoala" id="jilley_and_baby" value="Jilley and baby">
+                    <label for="jilley_and_baby">Jilley and baby</label>
+                  </div>
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/koala_c.jpg" alt="Koala C Koala Image">
+                    <input type="radio" name="selectedKoala" id="koala_c" value="Koala C">
+                    <label for="koala_c">Koala C</label>
+                  </div>
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/lucy.jpg" alt="Lucy Koala Image">
+                    <input type="radio" name="selectedKoala" id="lucy" value="Lucy">
+                    <label for="lucy">Lucy</label>
+                  </div>
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/miffy.jpg" alt="Miffy Koala Image">
+                    <input type="radio" name="selectedKoala" id="miffy" value="Miffy">
+                    <label for="miffy">Miffy</label>
+                  </div>
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/niley.jpg" alt="Niley Koala Image">
+                    <input type="radio" name="selectedKoala" id="niley" value="Niley">
+                    <label for="niley">Niley</label>
+                  </div>
+                  <div class="koala-item">
+                    <img class="koala-image" src="koala_gallery/nooka_and_baby.jpg" alt="Nooka and baby Koala Image">
+                    <input type="radio" name="selectedKoala" id="nooka_and_baby" value="Nooka and baby">
+                    <label for="nooka_and_baby">Nooka and baby</label>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!--close form box row-->
+
+          <div class="form-group">
+            <label class="message-label" for="inputMessage">Message: </label>
+            <br>
+            <textarea name="inputMessage" id="inputMessage" placeholder="Type your message here."></textarea>
+          </div>
+
+          <div class="flex-buttons">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </main>
+      <footer>
+        <p>
+          Copyright 2018 All rights reserved.
+          <a href="https://www.savethekoala.com/" target="_blank">Australian Koala Foundation</a>
+        </p>
+        <p>
+          <img src="images/koala_logo.svg" alt="Koala logo" width="5%" height="5%" class="footimage" />
+        </p>
+      </footer>
+    </div>
+    <!--Close the container div-->
+  </body>
+</html>
